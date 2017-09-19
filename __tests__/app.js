@@ -11,7 +11,26 @@ describe('generator-luobata-vue-libs:app', () => {
 
   it('creates files', () => {
     assert.file([
-      'dummyfile.txt'
+      'build',
+      'dist',
+      'src',
+      'test',
+      'src/header',
+      '.gitignore',
+      '.babelrc',
+      '.tern-project',
+      'package.json',
+      'build/build.js',
+      'build/dev-server.js',
+      'build/rollup.config.src.js',
+      'build/webpack.config-src.js',
+      'build/webpack.config-test.js',
+      'src/index_global.js',
+      'src/index_local.js',
+      'src/header/header.vue',
+      'test/app.vue',
+      'test/index.html',
+      'test/index.js'
     ]);
   });
 });

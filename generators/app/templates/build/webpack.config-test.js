@@ -86,7 +86,6 @@ var webpackConfig = {
                 NODE_ENV: '"production"'
             }
         }),
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new htmlWebpackPlugin({

@@ -18,7 +18,7 @@ mkdir('-p', dist);
 
 
 var webpack = require('webpack');
-var webpackConfig = require('./webpack.config.header.js');
+var webpackConfig = require('./webpack.config-src.js');
 webpack(webpackConfig, function (err, stats) {
     spinner.stop();
     if (err) throw err;

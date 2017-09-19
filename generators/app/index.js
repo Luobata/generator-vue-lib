@@ -2,18 +2,18 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
-const _ = require('lodash');
+// Const _ = require('lodash');
 const mkdirp = require('mkdirp');
 const path = require('path');
 
-function toCamelCase(string) {
-  if (string.indexOf('-') < 0 && string.indexOf('_') < 0) {
-    return string;
-  }
-  return string.replace(/[-_][^-_]/g, function (match) {
-    return match.charAt(1).toUpperCase();
-  });
-}
+// Function toCamelCase(string) {
+//   if (string.indexOf('-') < 0 && string.indexOf('_') < 0) {
+//     return string;
+//   }
+//   return string.replace(/[-_][^-_]/g, function (match) {
+//     return match.charAt(1).toUpperCase();
+//   });
+// }
 
 module.exports = class extends Generator {
   prompting() {
@@ -68,7 +68,7 @@ module.exports = class extends Generator {
     mkdirp('dist');
     mkdirp('src');
     mkdirp('test');
-    mkdir('src/header');
+    mkdirp('src/header');
     this.fs.copy(
       this.templatePath('gitignore_tpl'),
       this.destinationPath('.gitignore')
@@ -102,12 +102,12 @@ module.exports = class extends Generator {
       'build/util.js'
     );
     this.fs.copy(
-      this.templatePath('build/webpack.config.src.js'),
-      'build/webpack.config.src.js'
+      this.templatePath('build/webpack.config-src.js'),
+      'build/webpack.config-src.js'
     );
     this.fs.copy(
-      this.templatePath('build/webpack.config.test.js'),
-      'build/webpack.config.test.js'
+      this.templatePath('build/webpack.config-test.js'),
+      'build/webpack.config-test.js'
     );
 
     this.fs.copy(

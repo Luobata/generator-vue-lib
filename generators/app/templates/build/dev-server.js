@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.config.js');
+var webpackConfig = require('./webpack.config-test.js');
 var webpack = require('webpack');
 var compiler = webpack(webpackConfig);
 
