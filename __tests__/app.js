@@ -18,6 +18,7 @@ describe('generator-luobata-vue-libs:app', () => {
       'src/header',
       '.gitignore',
       '.babelrc',
+      '.eslintrc',
       '.tern-project',
       'package.json',
       'build/build.js',

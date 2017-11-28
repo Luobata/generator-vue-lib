@@ -82,6 +82,10 @@ module.exports = class extends Generator {
       this.destinationPath('.tern-project')
     );
     this.fs.copy(
+      this.templatePath('eslint_tpl'),
+      this.destinationPath('.eslintrc')
+    );
+    this.fs.copy(
       this.templatePath('babelrc_rollup_tpl'),
       this.destinationPath('src/.babelrc')
     );
