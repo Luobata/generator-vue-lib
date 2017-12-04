@@ -5,12 +5,14 @@
     "main": "index.js",
     "scripts": {
         "dev": "rollup -w -c build/rollup.config.js",
+        "dev:webpack": "node build/build.js",
         "build": "rollup -c build/rollup.config.js",
-        "build-w": "node build/build.js",
         "test": "node build/dev-server.js",
         "lint": "eslint --fix src/"
     },
     "devendencies": {
+    },
+    "devDependencies": {
         "async-validator": "1.6.7",
         "babel-core": "^6.24.0",
         "babel-loader": "^6.4.1",
@@ -36,9 +38,8 @@
         "rollup-plugin-url": "^1.2.0",
         "rollup-plugin-vue": "^2.4.1",
         "rollup-plugin-vue2": "^0.8.0",
-        "rollup-watch": "^2.5.0"
-    },
-    "devDependencies": {
+        "rollup-watch": "^2.5.0",
+        "opn": "^5.1.0",
         "eslint": "^4.6.0",
         "eslint-config-airbnb": "^16.1.0",
         "eslint-plugin-import": "^2.8.0",

@@ -23,7 +23,7 @@ describe('generator-luobata-vue-libs:app', () => {
       'package.json',
       'build/build.js',
       'build/dev-server.js',
-      'build/rollup.config.src.js',
+      'build/rollup.config.js',
       'build/webpack.config-src.js',
       'build/webpack.config-test.js',
       'src/index_global.js',

@@ -8,7 +8,8 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
         colors: true,
         chunks: false
     }
-})
+});
+var opn = require('opn');
 
 var hotMiddleware = require('webpack-hot-middleware')(compiler)
 // force page reload when html-webpack-plugin template changes
@@ -39,4 +40,5 @@ module.exports = app.listen(port, function (err) {
     }
     var uri = 'http://127.0.0.1:' + port
     console.log('Listening at ' + uri + '\n')
+    opn(`http://127.0.0.1:${port}`);
 });

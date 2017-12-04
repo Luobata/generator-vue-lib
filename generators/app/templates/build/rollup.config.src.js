@@ -17,7 +17,7 @@ module.exports = {
     name: 'ecologyHeader',
     sourcemap: true,
     output: {
-        file: 'dist/bundle.js',
+        file: 'dist/header.js',
         format: 'umd'
     },
     plugins: [
@@ -26,7 +26,6 @@ module.exports = {
         commonjs(),
         vue({
             css: true
-            //css: 'dist/header.css'
         }),
         url(),
         babel({

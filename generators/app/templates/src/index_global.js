@@ -1,4 +1,4 @@
-import app from './header.vue';
+import app from './header/header.vue';
 
 const install = (Vue) => {
     Vue.component(app.name, app);

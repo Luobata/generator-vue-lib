@@ -99,7 +99,7 @@ module.exports = class extends Generator {
     );
     this.fs.copy(
       this.templatePath('build/rollup.config.src.js'),
-      'build/rollup.config.src.js'
+      'build/rollup.config.js'
     );
     this.fs.copy(
       this.templatePath('build/util.js'),
