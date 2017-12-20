@@ -106,6 +106,10 @@ module.exports = class extends Generator {
       'build/util.js'
     );
     this.fs.copy(
+      this.templatePath('build/vue-loader.conf.js'),
+      'build/vue-loader.conf.js'
+    );
+    this.fs.copy(
       this.templatePath('build/webpack.config-src.js'),
       'build/webpack.config-src.js'
     );

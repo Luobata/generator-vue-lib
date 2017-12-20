@@ -22,6 +22,8 @@ describe('generator-luobata-vue-libs:app', () => {
       '.tern-project',
       'package.json',
       'build/build.js',
+      'build/util.js',
+      'build/vue-loader.conf.js',
       'build/dev-server.js',
       'build/rollup.config.js',
       'build/webpack.config-src.js',

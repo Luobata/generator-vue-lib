@@ -1,6 +1,7 @@
 var assetsSubDirectory = 'static/';
 var path = require('path');
 var root = path.resolve(__dirname, '../');
+var vueLoaderConfig = require('./vue-loader.conf');
 
 module.exports = {
     devtool: 'source-map',
@@ -16,32 +17,37 @@ module.exports = {
         loaders: [
             {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'vue-loader',
+                options: vueLoaderConfig
             },
             {
                 test: /\.json$/,
-                loader: "json"
+                loader: "json-loader"
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url',
+                loader: 'url-loader',
                 query: {
                     limit: 10000,
                     name: assetsSubDirectory + 'img/[name].[hash:7].[ext]'
                 }
             },
             {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 10000,
+                    name: assetsSubDirectory + 'fonts/[name].[hash:7].[ext]'
+                }
+            },
+            {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 include: root,
                 exclude: [
                     path.join(root, '../node_modules/')
                 ]
             },
-            {
-                test: /\.css$/,
-                loader: 'style!css'//添加对样式表的处理
-            }
         ]
     },
 

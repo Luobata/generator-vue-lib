@@ -21,7 +21,7 @@ module.exports = {
         format: 'umd'
     },
     plugins: [
-        // uglify(),
+        uglify(),
         resolve(),
         commonjs(),
         vue({
