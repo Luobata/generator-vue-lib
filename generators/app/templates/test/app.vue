@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        header(
+        eHeader(
             siteName='看房团管理后台'
             userName='罗比塔'
             @changeCity='changeCity')

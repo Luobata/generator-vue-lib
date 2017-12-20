@@ -9,6 +9,9 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 };
 
-module.exports = {
-    install
+//module.exports = {
+//    install
+//};
+export default {
+    install,
 };
