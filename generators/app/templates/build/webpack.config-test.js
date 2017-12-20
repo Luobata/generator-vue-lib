@@ -21,7 +21,6 @@ var webpackConfig = {
     },
     resolve: {
         extensions: ['json', '.js', '.vue'],
-        fallback: [path.join(__dirname, '../node_modules')],
         alias: {
             'vue': 'vue/dist/vue',
             'src': path.resolve(__dirname, '../src'),

@@ -1,6 +1,6 @@
 import app from './header/header.vue';
 
-const install = (Vue) => {
+const install = (Vue, conf) => {
     Vue.component(app.name, app);
 };
 
